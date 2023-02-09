@@ -8,6 +8,9 @@ import router from "./routes/urlRouter.js";
 // initializing the app
 const app = express();
 
+app.use(express.json());
+// app.set("view engine", "ejs");
+
 app.use("/url", router);
 
 const MONGO_URI = process.env.MONGO_URI;
